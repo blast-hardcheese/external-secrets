@@ -83,8 +83,8 @@ func NewGCPProvider(f *framework.Framework, credentials, projectID string,
 }
 
 func NewFromEnv(f *framework.Framework, controllerClass string) *GcpProvider {
-	projectID := os.Getenv("GCP_PROJECT_ID")
-	credentials := os.Getenv("GCP_SM_SA_JSON")
+	projectID := os.Getenv("GCP_FED_PROJECT_ID")
+	credentials := os.Getenv("GCP_SERVICE_ACCOUNT_KEY")
 	serviceAccountName := os.Getenv("GCP_KSA_NAME")
 	serviceAccountNamespace := "default"
 	clusterLocation := os.Getenv("GCP_GKE_ZONE")
